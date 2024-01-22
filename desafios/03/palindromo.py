@@ -6,6 +6,14 @@ palindromo = input("Escreva a palavra para verificar se é palíndromo: ")
 
 palindromo = palindromo.lower()
 palindromo = palindromo.replace(" ", "")
+palindromo = palindromo.replace("!", "")
+palindromo = palindromo.replace("?", "")
+palindromo = palindromo.replace(".", "")
+palindromo = palindromo.replace(",", "")
 
-for i in range(len(palindromo)):
-    if i
+for i in range(len(palindromo) // 2):
+    if palindromo[i] != palindromo[-(i + 1)]:
+        print("A palavra não é um palíndromo.")
+        break
+else:
+    print("A palavra é um palíndromo.")
